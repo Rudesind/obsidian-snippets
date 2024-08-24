@@ -11,7 +11,7 @@
 
 A collection of both personal and third-party [Obsidian](https://obsidian.md/) snippets. Please note that all third-party code belongs to the original authors. Credits and source are included at the top of each snippet. All snippsets should work with **Obsidian Publish.**
 
-> [!info] 
+> [!note] 
 > For more information about CSS Snippets and implementing them, see the [offical documentation](https://help.obsidian.md/Extending+Obsidian/CSS+snippets).
 
 ## Snippets
