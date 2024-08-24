@@ -1,0 +1,42 @@
+/* ----------------------------------------------------------------------------
+  .___  ________  __________  ________  ___.
+  |   \ \       \ \        / /       / /   |
+  |    \ \       \ \      / /_______/ /    |
+  |     \ \       \ \    / ________  /     |
+  |      \ \       \ \  / /       / /      |
+  |_______\ \_______\ \/ /_______/ /_______|
+ 
+  znybo
+  2024-08-21
+
+  This makes an image round with a fixed height, width and a border. You will 
+  likely need to change the border color to match your theme.
+
+  I got this code from: https://yomaru.dev/home. All credit goes to the 
+  original author.
+
+  Source: https://yomaru.dev/home
+
+  Use:
+
+  ---
+  cssclasses:
+    - profile-image
+  ---
+
+  ![[image|profile-image]]
+
+---------------------------------------------------------------------------- */
+
+.profile-image img[alt*="profile-image"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: var(--background-modifier-border);
+    border-width: medium;
+}

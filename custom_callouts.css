@@ -1,0 +1,99 @@
+/* ----------------------------------------------------------------------------
+  .___  ________  __________  ________  ___.
+  |   \ \       \ \        / /       / /   |
+  |    \ \       \ \      / /_______/ /    |
+  |     \ \       \ \    / ________  /     |
+  |      \ \       \ \  / /       / /      |
+  |_______\ \_______\ \/ /_______/ /_______|
+ 
+  znybo
+  2024-08-23
+
+  Some custom callouts I made for various different styles and purposes.
+
+---------------------------------------------------------------------------- */
+
+.callout[data-callout="file"] {
+    --callout-color: 102, 255, 255;
+    --callout-icon: paperclip;
+}
+.callout[data-callout="attachment"] {
+    --callout-color: 102, 255, 255;
+    --callout-icon: paperclip;
+}
+
+.callout[data-callout="agenda"] {
+    --callout-color: 224, 115, 61;
+    --callout-icon: clipboard-list;
+}
+.callout[data-callout="topics"] {
+    --callout-color: 224, 115, 61;
+    --callout-icon: clipboard-list;
+}
+.callout[data-callout="bullets"] {
+    --callout-color: 199, 72, 161;
+    --callout-icon: image;
+}
+
+.callout[data-callout="screenshot"] {
+    --callout-color: 199, 72, 161;
+    --callout-icon: image;
+}
+.callout[data-callout="image"] {
+    --callout-color: 199, 72, 161;
+    --callout-icon: image;
+}
+
+.callout[data-callout="script"] {
+    --callout-color: 150, 139, 126;
+    --callout-icon: code;
+}
+.callout[data-callout="code"] {
+    --callout-color: 150, 139, 126;
+    --callout-icon: code;
+}
+.callout[data-callout="code block"] {
+    --callout-color: 150, 139, 126;
+    --callout-icon: code;
+}
+
+.callout[data-callout="pending"] {
+    --callout-color: 77, 77, 77;
+    --callout-icon: circle-ellipsis;
+}
+.callout[data-callout="not_started"] {
+    --callout-color: 77, 77, 77;
+    --callout-icon: circle-ellipsis;
+}
+.callout[data-callout="open"] {
+    --callout-color: 142, 168, 56;
+    --callout-icon: list-todo;
+}
+.callout[data-callout="work_in_progress"] {
+    --callout-color: 142, 168, 56;
+    --callout-icon: list-todo;
+}
+.callout[data-callout="active"] {
+    --callout-color: 142, 168, 56;
+    --callout-icon: list-todo;
+}
+.callout[data-callout="closed"] {
+    --callout-color: 13, 148, 189;
+    --callout-icon: check-check;
+}
+.callout[data-callout="complete"] {
+    --callout-color: 13, 148, 189;
+    --callout-icon: check-check;
+}
+.callout[data-callout="blocked"] {
+    --callout-color: 189, 13, 42;
+    --callout-icon: x-octagon;
+}
+.callout[data-callout="shared"] {
+    --callout-color: 77, 77, 77;
+    --callout-icon: forward;
+}
+.callout[data-callout="delegated"] {
+    --callout-color: 77, 77, 77;
+    --callout-icon: forward;
+}

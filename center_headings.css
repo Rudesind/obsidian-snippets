@@ -1,0 +1,30 @@
+/* ----------------------------------------------------------------------------
+  .___  ________  __________  ________  ___.
+  |   \ \       \ \        / /       / /   |
+  |    \ \       \ \      / /_______/ /    |
+  |     \ \       \ \    / ________  /     |
+  |      \ \       \ \  / /       / /      |
+  |_______\ \_______\ \/ /_______/ /_______|
+ 
+  znybo
+  2024-08-21
+
+  This centers headings in the reading pane rather than being left-aligned.
+
+---------------------------------------------------------------------------- */
+
+/* === EDIT MODE === */
+
+.HyperMD-header.HyperMD-header-1 {
+    text-align: center;
+}
+
+.HyperMD-header.HyperMD-header-2 {
+    text-align: center;
+}
+
+/* === PREVIEW MODE === */
+
+.markdown-preview-view h1, h2 {
+    text-align: center;
+}

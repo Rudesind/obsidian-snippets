@@ -1,0 +1,23 @@
+/****************************************************
+  .___  ________  __________  ________  ___.
+  |   \ \       \ \        / /       / /   |
+  |    \ \       \ \      / /_______/ /    |
+  |     \ \       \ \    / ________  /     |
+  |      \ \       \ \  / /       / /      |
+  |_______\ \_______\ \/ /_______/ /_______|
+ 
+  znybo
+  2024-08-21
+
+  These callouts are colored for the Gruvbox theme.
+****************************************************/
+
+.callout[data-callout="blog-post"] {
+    --callout-color: 69, 133, 136;
+    --callout-icon: pencil-line;
+}
+
+.callout[data-callout="blog"] {
+    --callout-color: 177, 98, 134;
+    --callout-icon: library-big;
+}

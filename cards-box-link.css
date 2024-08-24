@@ -1,0 +1,85 @@
+/* ----------------------------------------------------------------------------
+  .___  ________  __________  ________  ___.
+  |   \ \       \ \        / /       / /   |
+  |    \ \       \ \      / /_______/ /    |
+  |     \ \       \ \    / ________  /     |
+  |      \ \       \ \  / /       / /      |
+  |_______\ \_______\ \/ /_______/ /_______|
+ 
+  znybo
+  2024-08-21
+
+  I actually took this idea/code from the official Obsidian help site. 
+  Basically this uses the Minimal Cards CSS to turn the cards into clickable 
+  links. Additionally, it changes the look of the cards as well.
+
+  Note that to use this you must have the Minimal theme installed or the 
+  Minimal Cards snippet.
+
+  Source: https://help.obsidian.md/import
+
+  Use:
+
+  ---
+  cssclasses:
+    - list-cards
+    - cards
+  ---
+
+---------------------------------------------------------------------------- */
+
+.list-cards.cards-box-link div>ul {
+    --link-color: var(--text-normal);
+    --link-unresolved-color: var(--text-muted);
+    --link-decoration: none;
+    --link-decoration-hover: none;
+    --link-external-color: var(--text-normal);
+    --link-external-decoration: none;
+    --link-external-decoration-hover: none;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: var(--cards-columns);
+    padding: 0;
+}
+
+.list-cards.cards-box-link ul>li {
+    margin-inline: 0;
+}
+
+.list-cards.cards-box-link div>ul>li {
+    display: flex;
+    border-radius: var(--radius-s);
+    border: 1px solid var(--color-base-25);
+    flex-wrap: wrap;
+    margin-inline: 0;
+}
+
+.list-cards.cards-box-link div>ul>li a:hover {
+    border-color: var(--color-base-35);
+}
+
+.list-cards.cards-box-link div>ul>li a {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    font-weight: var(--font-semibold);
+    background: none;
+}
+
+.list-cards.cards-box-link div>ul ul {
+    display: block;
+    width: 100%;
+    color: var(--text-muted);
+    font-size: var(--font-smaller);
+    margin-top: -8px;
+    padding: 0 16px 16px;
+}
+
+.list-cards.cards-box-link div>ul ul>li {
+    display: block;
+}
+
+.theme-dark .list-cards.cards-box-link div ul>li {
+    background-color: var(--background-secondary);
+}

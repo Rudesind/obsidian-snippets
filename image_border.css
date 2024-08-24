@@ -1,0 +1,22 @@
+/* ----------------------------------------------------------------------------
+  .___  ________  __________  ________  ___.
+  |   \ \       \ \        / /       / /   |
+  |    \ \       \ \      / /_______/ /    |
+  |     \ \       \ \    / ________  /     |
+  |      \ \       \ \  / /       / /      |
+  |_______\ \_______\ \/ /_______/ /_______|
+ 
+  znybo
+  2024-08-23
+
+  This adds a border and a little bit of a drop shadow to images. Helps them
+  "pop" a little.
+
+---------------------------------------------------------------------------- */
+
+.markdown-source-view.mod-cm6 .internal-embed > img,
+.markdown-preview-view .internal-embed > img {
+    box-shadow: 0 28px 8px -26px rgba(0, 0, 0);
+    border:2px solid #d65d0e;
+    margin: 0.25rem 0.25rem 0.75rem 0.25rem;
+}
