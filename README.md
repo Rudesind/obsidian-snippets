@@ -126,3 +126,12 @@ cssclasses:
 
 ![[image|profile-image]]
 ```
+
+### center_callout_body.css
+Modify callouts to center content. By default callouts are set to "12px 12x 12px 24px," this overrides the "24px" to "12px."
+
+Use:
+
+```
+[!info|center]
+```
