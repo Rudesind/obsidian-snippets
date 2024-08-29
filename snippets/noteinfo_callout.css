@@ -1,0 +1,33 @@
+.callout[data-callout=noteinfo] {
+    --callout-icon: "";
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-variant-caps: all-small-caps;
+    font-size: var(--font-small);
+    padding: 0;
+    background: 0;
+}
+
+.callout[data-callout=noteinfo] .callout-title {
+    padding: 8px 12px 8px 12px;
+    background: var(--background-primary-alt-1);
+    border: 2px dashed var(--background-primary-alt-1);
+    border-radius: 12px;
+    box-shadow: var(--cbs);
+    color: var(--text-accent);
+}
+
+.theme-light {
+    --cbs: 0px 2px 4px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.01),
+        0px 4px 8px rgba(0, 0, 0, 0.01), 0px 0px 12px rgba(0, 0, 0, 0.01),
+        0px 2px 16px rgba(0, 0, 0, 0.01), 0px 4px 20px rgba(0, 0, 0, 0.01);
+    --background-primary-alt-1: var(--background-primary);
+}
+
+.theme-dark {
+    --cbs: 0px 2px 4px rgba(0, 0, 0, 0.05), 0px 4px 8px rgba(0, 0, 0, 0.03),
+        0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 12px rgba(0, 0, 0, 0.03),
+        0px 2px 16px rgba(0, 0, 0, 0.03), 0px 4px 20px rgba(0, 0, 0, 0.02);
+    --background-primary-alt-1: var(--background-primary-alt);
+}

@@ -135,3 +135,16 @@ Use:
 ```
 [!info|center]
 ```
+
+### noteinfo_callout.css
+Custom callout I created with inspiration from [Marco Noris's](https://lab.marconoris.com/) publish site.
+
+Basically this creates a custom callout that is centered and only designed to show simple note info, like the date or author of the note. I also took some formating from the [kneecaps blockquote styling](https://github.com/Rudesind/obsidian-snippets?tab=readme-ov-file#blockquote_stylingcss), and a little bit from [outlined callouts](https://github.com/Rudesind/obsidian-snippets?tab=readme-ov-file#outlined_calloutscss).
+
+Note that this snippet is designed to only have text in the title. Adding any body text will have unpleasent styling.
+
+Use:
+
+```
+[!noteinfo] Date · Author
+```
