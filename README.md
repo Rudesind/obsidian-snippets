@@ -111,6 +111,14 @@ cssclasses:
 ---
 ```
 
+I've also added a modification of my own that centers the title and icon in the callout.
+
+Use:
+
+```
+[!info|center-title]
+```
+
 ### profile_image.css
 This snippet was written by me, but I took the idea from: https://yomaru.dev/home. All credit goes to the original author.
 
