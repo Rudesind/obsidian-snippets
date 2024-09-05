@@ -81,3 +81,17 @@ SOFTWARE.
 .callouts-outlined .callout-content .callout {
   margin-top: 18px;
 }
+
+/*
+  If using outlined callouts, this will center the title in the callout. Note 
+  that the "-24px" set for the "margin-top" property is taken from the default 
+  setting for the outlined callouts.
+
+ Use:
+
+ [!info|center-title]
+
+*/
+.callouts-outlined .callout[data-callout-metadata*="center-title"] .callout-title {
+    margin: -24px auto auto;
+}
