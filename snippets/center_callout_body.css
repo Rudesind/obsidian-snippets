@@ -14,10 +14,10 @@
 
   Use:
 
-  [!info|center]
+  [!info|center-content]
 
 ---------------------------------------------------------------------------- */
 
-.callout[data-callout-metadata*="center"] {
+.callout[data-callout-metadata*="center-content"] {
     padding: var(--size-4-3) var(--size-4-3) var(--size-4-3) var(--size-4-3);
 }
