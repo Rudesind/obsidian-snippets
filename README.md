@@ -141,7 +141,7 @@ Modify callouts to center content. By default callouts are set to "12px 12x 12px
 Use:
 
 ```
-[!info|center]
+[!info|center-content]
 ```
 
 ### noteinfo_callout.css
