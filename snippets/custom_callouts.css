@@ -97,3 +97,9 @@
     --callout-color: 77, 77, 77;
     --callout-icon: forward;
 }
+
+.callout[data-callout="habit"] {
+    --callout-color: 104, 157, 106;
+    --callout-icon: brain-circuit;
+}
+
