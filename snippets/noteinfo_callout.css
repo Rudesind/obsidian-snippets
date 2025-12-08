@@ -1,3 +1,20 @@
+/*
+    $$   $$$$$$$   $$$$$$$$$$  /$$$$$$$  /$$
+  | $$$ \ $$$$$$$ \ $$$$$$$$  /$$$$$$$  /$$$
+  | $$$$ \ $$$$$$$ \ $$$$$$  /______/  /$$$$
+  | $$$$$ \ $$$$$$$ \ $$$$  /$$$$$$$  /$$$$$
+  | $$$$$$ \ $$$$$$$ \ $$  /$$$$$$$  /$$$$$$
+  |______/  \______/  \_/ /______/  /______/
+ 
+  @sendimaor
+  2025-12-07
+
+  This custom callout is intended to display information in a single
+  line. Can be used to create some custom visiual effects inline.
+
+  Use:
+    > [!noteinfo] Info1 · Info2 · Info3
+*/
 .callout[data-callout=noteinfo] {
     --callout-icon: "";
     position: relative;
