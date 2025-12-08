@@ -19,7 +19,7 @@ A collection of both personal and third-party [Obsidian](https://obsidian.md/) s
 See below for a list of all snippets included, authors, use, and purpose.
 
 ### ascii_art_callout.css
-Primary snippet was created by me (with AI assistance). CRT effect was taken from [Never Complete Only Abandoned](this publish site: https://publish.obsidian.md/xybre/permalink/968a5768-1ebc-4c71-8459-c24a8384faeb).
+Primary snippet was created by me (with AI assistance). CRT effect was taken from [Never Complete Only Abandoned](https://publish.obsidian.md/xybre/permalink/968a5768-1ebc-4c71-8459-c24a8384faeb).
 
 Callout that can be used to display ASCII art in notes. Adds a border, coloring, and CRT like effects. Currently styled in Gruvbox colors. Also supports different sizes (tiny, sm, lg, huge).
 
