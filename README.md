@@ -1,12 +1,12 @@
 # Obsidian Snippets
 
 ```
-.___  ________  __________  ________  ___.
-|   \ \       \ \        / /       / /   |
-|    \ \       \ \      / /_______/ /    |
-|     \ \       \ \    / ________  /     |
-|      \ \       \ \  / /       / /      |
-|_______\ \_______\ \/ /_______/ /_______|
+    $$   $$$$$$$   $$$$$$$$$$  /$$$$$$$  /$$
+  | $$$ \ $$$$$$$ \ $$$$$$$$  /$$$$$$$  /$$$
+  | $$$$ \ $$$$$$$ \ $$$$$$  /______/  /$$$$
+  | $$$$$ \ $$$$$$$ \ $$$$  /$$$$$$$  /$$$$$
+  | $$$$$$ \ $$$$$$$ \ $$  /$$$$$$$  /$$$$$$
+  |______/  \______/  \_/ /______/  /______/
 ```
 
 A collection of both personal and third-party [Obsidian](https://obsidian.md/) snippets. Please note that all third-party code belongs to the original authors. Credits and source are included at the top of each snippet. All snippsets should work with **Obsidian Publish.**
@@ -18,6 +18,19 @@ A collection of both personal and third-party [Obsidian](https://obsidian.md/) s
 ---
 See below for a list of all snippets included, authors, use, and purpose.
 
+### ascii_art_callout.css
+Primary snippet was created by me (with AI assistance). CRT effect was taken from [Never Complete Only Abandoned](this publish site: https://publish.obsidian.md/xybre/permalink/968a5768-1ebc-4c71-8459-c24a8384faeb).
+
+Callout that can be used to display ASCII art in notes. Adds a border, coloring, and CRT like effects. Currently styled in Gruvbox colors. Also supports different sizes (tiny, sm, lg, huge).
+
+Use:
+
+```
+> ![ascii-wave-sm]
+> ```
+> art
+> ```
+```
 ### MCL Multi Column.css
 Snippet is from author [efemkay](https://github.com/efemkay/obsidian-modular-css-layout) and all credit goes to them (link to [LICENSE](https://github.com/efemkay/obsidian-modular-css-layout/blob/main/LICENSE)). While the snippet has many uses, I personally like the [Multi Column Callout](https://github.com/efemkay/obsidian-modular-css-layout?tab=readme-ov-file#multi-column-callout) feature. I like to combine this with the callout outlines. Use:
 
@@ -73,7 +86,8 @@ Use:
 > <cite>Author</cite>
 ```
 
-### blog_post_callout.css and custom_callouts.css
+### custom_callouts.css
+
 Created by me. Simple callout styles. Colors might need to be changed depending on your theme.
 
 ### cards-box-link.css
