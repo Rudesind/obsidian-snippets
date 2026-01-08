@@ -1,0 +1,127 @@
+/*
+  ███╗   ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ 
+  ████╗  ██║██╔══██╗██║   ██║██╔══██╗██╔══██╗██╔══██╗
+  ██╔██╗ ██║███████║██║   ██║██████╔╝███████║██████╔╝
+  ██║╚██╗██║██╔══██║╚██╗ ██╔╝██╔══██╗██╔══██║██╔══██╗
+  ██║ ╚████║██║  ██║ ╚████╔╝ ██████╔╝██║  ██║██║  ██║
+  ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+
+  @sendimaor
+  2026-01-06
+
+  *GENERATED WITH AI
+
+  Minimal navbar callout for subtle top-of-file navigation.
+  Displays 3 links in a single horizontal bar: [← Left] [HOME] [Right →]
+
+  Usage:
+    >[!navbar]
+    ><[[Previous Page]] [[HOME]] [[Next Page]]>
+
+    >[!navbar]
+    ><`=this.previous` `=this.home` `=this.next`>
+*/
+
+/* Base Navbar Callout - Minimal Single Bar */
+.callout[data-callout="navbar"] {
+    /* Local Variables for easy theming */
+    --navbar-bg: rgba(30, 30, 46, 0.3);
+    --navbar-border: rgba(243, 139, 168, 0.2);
+    --navbar-text-muted: #bac2de;
+    --navbar-text-norm: #cdd6f4;
+    --navbar-accent: #f38ba8;
+    --navbar-hover-bg: rgba(243, 139, 168, 0.1);
+
+    background: var(--navbar-bg);
+    border: 1px solid var(--navbar-border);
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-bottom: 1em;
+    box-shadow: none;
+}
+
+/* Hide the title completely */
+.callout[data-callout="navbar"] .callout-title {
+    display: none;
+}
+
+/* Navbar Content - Simple Flex Layout */
+.callout[data-callout="navbar"] .callout-content {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    border-top: none !important;
+    position: relative;
+    
+    /* Handle text nodes (like arrows and pipes) */
+    color: rgba(186, 194, 222, 0.4);
+    font-size: 0.9em;
+}
+
+/* Optional: Hide text separators (pipes, arrows) for a cleaner look */
+/* 
+.callout[data-callout="navbar"] .callout-content { font-size: 0; }
+.callout[data-callout="navbar"] .callout-content > * { font-size: 0.95rem; }
+*/
+
+/* Style for links and Dataview inline expressions */
+.callout[data-callout="navbar"] .callout-content a.internal-link,
+.callout[data-callout="navbar"] .callout-content code {
+    display: inline-block;
+    padding: 6px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--navbar-text-muted);
+    font-weight: 500;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Middle link/code (HOME) - absolutely centered */
+.callout[data-callout="navbar"] .callout-content p > :nth-child(2) {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1;
+}
+
+/* Ensure the link inside the middle element gets the styles */
+.callout[data-callout="navbar"] .callout-content p > :nth-child(2),
+.callout[data-callout="navbar"] .callout-content p > :nth-child(2) a.internal-link,
+.callout[data-callout="navbar"] .callout-content p > :nth-child(2) code {
+    font-weight: 600;
+    color: var(--navbar-text-norm) !important;
+}
+
+/* Last link/code (right) */
+.callout[data-callout="navbar"] .callout-content p > :last-child {
+    margin-left: auto !important;
+}
+
+/* Hover effect - subtle */
+.callout[data-callout="navbar"] .callout-content a.internal-link:hover,
+.callout[data-callout="navbar"] .callout-content code:hover {
+    background: var(--navbar-hover-bg);
+    color: var(--navbar-accent);
+}
+
+/* Active/Click state */
+.callout[data-callout="navbar"] .callout-content a.internal-link:active,
+.callout[data-callout="navbar"] .callout-content code:active {
+    background: rgba(243, 139, 168, 0.15);
+}
+
+/* Remove default paragraph margins and ensure full width */
+.callout[data-callout="navbar"] .callout-content p {
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    position: relative !important;
+}
