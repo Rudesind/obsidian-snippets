@@ -1,0 +1,235 @@
+/*
+  ████████╗ ██████╗  ██████╗
+  ╚══██╔══╝██╔═══██╗██╔════╝
+     ██║   ██║   ██║██║     
+     ██║   ██║   ██║██║     
+     ██║   ╚██████╔╝╚██████╗
+     ╚═╝    ╚═════╝  ╚═════╝
+
+  @sendimaor
+  2026-01-11
+
+  **DISCLOSURE - AI Assisted**
+  AI was used to assist with initial generation of this snippet.
+
+  Callout designed to display note navigation. Good for a homepage.
+
+  Colors are designed to work with your theme but might need to be adjusted.
+
+  Usage:
+    > [!toc] What are you looking for?
+    > - [[Link1]]
+    >   - Description
+    > - [[Link2]]
+    >   - Description
+
+  Obsidian callout variables:
+    --callout-border-width
+    --callout-border-opacity
+    --callout-padding
+    --callout-radius
+    --callout-blend-mode
+    --callout-title-color
+    --callout-title-padding
+    --callout-title-size
+    --callout-title-weight
+    --callout-content-padding
+    --callout-content-background
+*/
+
+/* Primary container */
+.callout[data-callout="toc"] {
+
+    /* Variables used for colors */
+    --toc-card-bg: var(--background-primary);
+    --toc-border: var(--background-modifier-border);
+    --toc-accent: var(--interactive-accent);
+    --toc-separator: var(--background-modifier-border);
+
+    /* General styling */
+    border: 2px solid var(--toc-border);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+    background: var(--toc-card-bg) !important;
+    margin: 2rem auto !important;
+    padding: 32px 40px;
+
+}
+
+/* Title condiguration */
+.callout[data-callout="toc"] .callout-title {
+
+    /* Set callout variables first. */
+    --callout-title-color: var(--toc-accent);
+    --callout-title-size: 1.4em;
+    --callout-title-weight: 700;
+
+    background: transparent !important;
+    justify-content: center;
+    margin-bottom: 24px;
+
+}
+
+/* Hides the callout icon. Not needed for this callout */
+.callout[data-callout="toc"] .callout-icon {
+    display: none;
+}
+
+/* 
+  Removes the border that appears at the top of the content window. May only be 
+  applicable to certain themes.
+*/
+.callout[data-callout="toc"] .callout-content {
+    border-top: none !important;
+}
+
+/* Create the grid column layout for smaller displays. */
+.callout[data-callout="toc"] .callout-content>ul,
+.callout[data-callout="toc"] .callout-content>ol {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px 16px;
+
+}
+
+/* Create the grid column layout for larger displays*/
+@media (min-width: 640px) {
+
+    .callout[data-callout="toc"] .callout-content>ul,
+    .callout[data-callout="toc"] .callout-content>ol {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+}
+
+/* Customize the appearance of each list item. */
+.callout[data-callout="toc"] .callout-content li {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 28px;
+    background: var(--background-secondary);
+    margin: 0;
+    transition: all 0.2s ease;
+
+    /* 
+      This makes the box scale to content of the list item. Looks good for 
+      icons, but not as great for text.
+    */
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid var(--toc-border);
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    gap: 24px;
+
+}
+
+/* Hover Effect */
+.callout[data-callout="toc"] .callout-content li:hover {
+
+    background: var(--background-modifier-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08) !important;
+
+}
+
+
+/* Hide the default indentation guide that causes double bars */
+.callout[data-callout="toc"] li>ul::before,
+.callout[data-callout="toc"] li>ol::before {
+
+    display: none;
+
+}
+
+/* The Link (Title) - Left side */
+.callout[data-callout="toc"] .callout-content li>a.internal-link,
+.callout[data-callout="toc"] .callout-content li>a.external-link {
+
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--text-normal);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    position: relative;
+    padding-right: 24px;
+
+}
+
+/* Transform the size of the icon if using icons from the Iconize plugin. */
+.callout[data-callout="toc"] .callout-content li>a.internal-link>.cm-iconize-icon {
+
+    /* 
+      Unsure why, but setting display to "flex" from "inline-flex" fixes 
+      vertical alignment on icon.
+    */
+    display: flex !important;
+    transform: scale(1.5) !important;
+
+}
+
+/* Show a bar if line item has a description. */
+.callout[data-callout="toc"] .callout-content li:has(> ul:not(:empty))>a.internal-link::after,
+.callout[data-callout="toc"] .callout-content li:has(> ul:not(:empty))>a.external-link::after {
+
+    content: "|";
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: var(--toc-accent);
+    font-weight: 300;
+    opacity: 0.50;
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+}
+
+/* Shift line contents to the left if the bar isn't present. */
+.callout[data-callout="toc"] .callout-content li:not(:has(> ul:not(:empty)))>a.internal-link,
+.callout[data-callout="toc"] .callout-content li:not(:has(> ul:not(:empty)))>a.external-link {
+
+    padding-right: 0;
+
+}
+
+/* Set the hover cover for links */
+.callout[data-callout="toc"] .callout-content li>a:hover {
+
+    color: var(--toc-accent);
+
+}
+
+/* Configure the description text. */
+.callout[data-callout="toc"] .callout-content li ul li {
+
+    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    font-size: 0.95em;
+    color: var(--text-muted);
+
+}
+
+/* Disable effects on line item descriptions. */
+.callout[data-callout="toc"] .callout-content li ul li:hover {
+
+    background: transparent !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+
+}
+
+/* Hide bullet icon in reading view. */
+.markdown-rendered .callout[data-callout="toc"] .list-bullet {
+
+    display: none !important;
+
+}
