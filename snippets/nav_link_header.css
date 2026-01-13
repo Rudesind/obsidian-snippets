@@ -1,0 +1,156 @@
+/*
+  ███╗   ██╗ █████╗ ██╗   ██╗    ██╗     ██╗███╗   ██╗██╗  ██╗
+  ████╗  ██║██╔══██╗██║   ██║    ██║     ██║████╗  ██║██║ ██╔╝
+  ██╔██╗ ██║███████║██║   ██║    ██║     ██║██╔██╗ ██║█████╔╝ 
+  ██║╚██╗██║██╔══██║╚██╗ ██╔╝    ██║     ██║██║╚██╗██║██╔═██╗ 
+  ██║ ╚████║██║  ██║ ╚████╔╝     ███████╗██║██║ ╚████║██║  ██╗
+  ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝      ╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝
+
+  @sendimaor
+  2026-01-12
+
+  *DISCLAIMER - AI Assisted*
+  AI was used in the generation and modification of this snippet.
+
+  This snippet provides styling for the nav-link-header plugin by ahts4962:
+
+    - https://github.com/ahts4962/nav-link-header
+
+*/
+
+/* Set the local variables for quick edits to styling. */
+.nav-link-header-navigation {
+
+    --nav-header-bg: var(--background-primary);
+    --nav-header-bg-secondary: var(--background-secondary);
+    --nav-header-border-size: 2px;
+    --nav-header-border: var(--background-modifier-border);
+    --nav-header-text-muted: #bac2de;
+    --nav-header-text-norm: #cdd6f4;
+    --nav-header-accent: var(--interactive-accent);
+    --nav-header-hover-bg: var(--background-modifier-border);
+    --nav-header-icon-color: rgba(186, 194, 222, 0.6);
+    --nav-header-seperator: var(--background-modifier-border);
+
+}
+
+.nav-link-header-container {
+
+    background-color: var(--nav-header-bg);
+    border: var(--nav-header-border-size) solid var(--nav-header-border) !important;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.nav-link-header-link {
+
+    display: inline-block;
+
+}
+
+/* Link container modifications. */
+.nav-link-header-link a {
+
+    display: inline-block;
+    padding: 6px 12px;
+    background: transparent;
+    border: var(--nav-header-border-size) solid var(--nav-header-border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--nav-header-text-muted);
+    font-weight: 500;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+
+}
+
+/* Hover animation for links. */
+.nav-link-header-link a:hover {
+
+    background: var(--nav-header-hover-bg);
+    color: var(--nav-header-accent) !important;
+    transform: translateY(-2px);
+
+}
+
+.nav-link-header-separator {
+
+    color: var(--nav-header-seperator);
+
+}
+
+/* This container holds the Previous, Parent, and Next items. */
+.nav-link-header-three-way {
+
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+
+}
+
+/* Creates pop-in animation for links. */
+@keyframes navBoxGrow {
+    0% {
+        max-width: 0;
+        opacity: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    100% {
+        max-width: 300px; /* Large enough to fit any link */
+        opacity: 1;
+        /* Returns to the padding defined in your main css */
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@keyframes navTextReveal {
+
+    0% {
+        color: transparent;
+    }
+    100% {
+        color: var(--nav-header-text-muted); 
+    }
+
+}
+
+.nav-link-header-link a {
+
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    
+    color: transparent;
+
+    animation: 
+        navBoxGrow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards,
+        navTextReveal 0.4s ease-out 0.3s forwards;
+}
+
+@media (max-width: 768px) {
+    .nav-link-header-container {
+        padding: 6px 12px;
+        gap: 6px;
+    }
+    
+    .nav-link-header-link a {
+        padding: 4px 8px;
+        font-size: 0.9em;
+        max-width: 15ch;
+    }
+    
+    .nav-link-header-separator {
+        padding: 0 2px;
+    }
+}
